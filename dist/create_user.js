@@ -13,7 +13,12 @@ const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        yield prisma.user;
+        yield prisma.user.create({
+            data: {
+                email: "Harsh@pandeygmail.com",
+                name: "harsh"
+            }
+        });
     });
 }
 main()

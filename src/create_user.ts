@@ -3,7 +3,12 @@ const prisma = new PrismaClient()
 
 
 async function main() {
-	await prisma.user
+	await prisma.user.create({
+		data:{
+			email:"Harsh@pandeygmail.com",
+			name:"harsh"
+		}
+	})
 }
 
 main()

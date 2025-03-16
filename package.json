@@ -11,10 +11,21 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.13.10",
+    "prisma": "^6.5.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   },
   "dependencies": {
     "@prisma/client": "^6.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Varun789-mx/prisma.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Varun789-mx/prisma/issues"
+  },
+  "homepage": "https://github.com/Varun789-mx/prisma#readme"
 }
