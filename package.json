@@ -18,14 +18,5 @@
   },
   "dependencies": {
     "@prisma/client": "^6.5.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://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@github.com/Varun789-mx/prisma.git"
-  },
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Varun789-mx/prisma/issues"
-  },
-  "homepage": "https://github.com/Varun789-mx/prisma#readme"
+  }  
 }
