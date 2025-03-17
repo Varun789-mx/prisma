@@ -44,7 +44,8 @@ async function main() {
             { email: "user100@example.com", name: "Vince"}
 
 			 
-		]
+		],
+        skipDuplicates:true,
 	})
 }
 
