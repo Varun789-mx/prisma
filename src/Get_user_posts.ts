@@ -2,15 +2,13 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient({ log: ['info', 'query'], })
 
-interface User {
-	id: number;
-}
 
-async function Getpost(prop: User) {
 
-	const post = await prisma.post.findUnique({
+async function Getpost(prop: number) {
+
+	const post = await prisma.post.findMany({
 		where: {
-			id: prop.id
+			authorId: prop
 		},
 	})
 
@@ -18,7 +16,7 @@ async function Getpost(prop: User) {
 	prisma.$disconnect()
 
 }
-Getpost({ id: 1 })
+Getpost(4)
 	.then(async () => {
 		prisma.$disconnect()
 		console.log("Query ran successfully")
