@@ -7,7 +7,7 @@ async function main() {
 	await prisma.post.createMany({
 		data:[ {
                 title: "First Post",
-                content: "This is the first post content.",
+                content: "This is the first post content. which is published",
                 published: true,
                 authorId: 1
             },
