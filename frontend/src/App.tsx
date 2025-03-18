@@ -10,7 +10,13 @@ function App() {
   const url = 'http://localhost:5000/getuser';
   const fetchuser = useCallback(async () => {
     try {
-      const response = await fetch(url);
+    const response = await fetch(url, {
+      method: 'GET',
+      mode: 'cors', // Explicitly specify CORS mode
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
       if (!response.ok) {
         console.log(`Response code:${response.status}`);
         return;
@@ -21,7 +27,7 @@ function App() {
     } catch (e) {
       console.error(e);
     }
-  }, []);
+  }, [url]);
   useEffect(() => {
     fetchuser()
   }, [fetchuser]);
