@@ -24,6 +24,8 @@ prisma/.env
 /dist/
 /build/
 /out/
+backend/dist
+dist
 
 # TypeScript
 *.tsbuildinfo
