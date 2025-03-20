@@ -6,6 +6,7 @@ function App() {
     id: number;
     name: string;
     email: string;
+    Posts?: string[];
   }
   const [user, setuser] = useState<prop[]>([]);
   const url = 'http://localhost:5000/getuser';
@@ -39,9 +40,13 @@ function App() {
           <div key={index}>
             <div className='block flex' >
 
-              <div className='w-1/5 p-1 m-0.5 border-1 border-gray-400'><p className='font-sans'>ID: {data.id}</p></div>
-              <div className='w-1/5 p-1 m-0.5 border-1 border-gray-400'><p className='font-sans'>Name: {data.name}</p></div>
-              <div className='w-1/5 p-1  m-0.5 border-1 border-gray-400'><p className='font-sans'>Email: {data.email}</p></div>
+              <div className='w-1/5 p-1 m-0.2 border-1 border-gray-400'><p className='font-sans'>ID: {data.id}</p></div>
+              <div className='w-1/5 p-1 m-0.2 border-1 border-gray-400'><p className='font-sans'>Name: {data.name}</p></div>
+              <div className='w-1/5 p-1  m-0.2 border-1 border-gray-400'><p className='font-sans'>Email: {data.email}</p></div>
+              <div className='w-1/5 p-1  m-0.2 border-1 border-gray-400'><div className='font-sans'>Posts:{data.Posts?.map((post,index)=>(
+                <div key={index}>
+                  <p>{post}</p></div>
+                  ))}</div></div>
             </div>
           </div>
         ))) : (
