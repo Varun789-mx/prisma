@@ -1,4 +1,3 @@
-
 import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 
@@ -45,8 +44,8 @@ function App() {
         )}
         
       </div>
-      </>
-)
+    </>
+  )
 }
 
-export default App;
+export default App
